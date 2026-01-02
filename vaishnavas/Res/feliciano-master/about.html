@@ -153,6 +153,257 @@
         max-width: 600px;
         margin: 0 auto;
       }
+      /* Top info bar */
+.top-bar {
+  background: #2f363b;
+  color: #cfd8dc;
+  font-size: 13px;
+  padding: 6px 0;
+}
+
+.top-bar span {
+  color: #8bc34a;
+  font-weight: 600;
+}
+
+/* Main navbar */
+.main-navbar {
+  background: #3a4146;
+  padding: 14px 0;
+}
+
+/* Brand name – same style as index */
+.navbar-brand {
+  font-family: 'Great Vibes', cursive;
+  font-size: 38px;
+  color: #9ccc65 !important;
+  font-weight: 400;
+  line-height: 1;
+}
+.navbar {
+  min-height: 80px;
+  display: flex;
+  align-items: center;
+}
+.navbar-brand:hover {
+  color: #aed581 !important;
+}
+
+
+/* Nav links */
+.nav-link {
+  color: #e0e0e0 !important;
+  margin: 0 10px;
+  font-weight: 500;
+}
+
+.nav-link:hover,
+.nav-link.active {
+  color: #9ccc65 !important;
+}
+
+/* Book table button */
+.btn-book {
+  background: #7cb342;
+  color: #fff;
+  padding: 10px 22px;
+  border-radius: 6px;
+  font-weight: 600;
+  transition: 0.3s ease;
+}
+
+.btn-book:hover {
+  background: #689f38;
+  color: #fff;
+}
+/* Navbar professional touch */
+#vs-navbar {
+  box-shadow: 0 2px 12px rgba(0,0,0,0.15);
+}
+
+/* Highlight CTA */
+.nav-item.cta .nav-link {
+  background: #7cb342;
+  color: #fff !important;
+  padding: 8px 18px;
+  border-radius: 6px;
+  font-weight: 600;
+}
+
+.nav-item.cta .nav-link:hover {
+  background: #689f38;
+}
+.vs-wrap-about {
+  padding: 80px 0;
+}
+
+.vs-wrap-about p {
+  font-size: 16px;
+  line-height: 1.8;
+  color: #555;
+}
+@media (max-width: 768px) {
+  .vs-wrap-about {
+    padding: 50px 0;
+  }
+
+  .vs-wrap-about video {
+    margin-bottom: 25px;
+  }
+}
+/* .heading-section h2 { 
+font-size: 42px; 
+font-weight: 700; 
+color: #333; } */
+
+
+/* .subheading {
+  font-size: 14px;
+  letter-spacing: 2px;
+  color: #7cb342;
+  text-transform: uppercase;
+} */
+
+/* Mobile typography */
+@media (max-width: 576px) {
+  .heading-section h2 {
+    font-size: 30px;
+  }
+
+  p {
+    font-size: 15px;
+  }
+}
+.services {
+  background: #fff;
+  border-radius: 12px;
+  padding: 30px 20px;
+  transition: 0.3s ease;
+}
+
+.services:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.12);
+}
+.vs-footer {
+  font-size: 14px;
+}
+
+.vs-footer-widget h2 {
+  font-size: 22px;
+  margin-bottom: 20px;
+}
+
+.vs-footer p {
+  color: #ccc;
+}
+@media (max-width: 576px) {
+  .navbar-brand {
+    font-size: 30px;
+  }
+
+  .nav-item.cta {
+    margin-top: 10px;
+  }
+
+  section {
+    padding: 50px 0;
+  }
+}
+/* FIX NAVBAR OVERLAP */
+body {
+  padding-top: 110px;
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 999;
+}
+/* .heading-section h2 {
+  position: relative;
+  z-index: 2;
+} */
+
+.heading-section .subheading {
+  display: block;
+  margin-bottom: 8px;
+}
+/* .heading-section h2::before {
+  display: none !important;
+} */
+.vs-wrap-about video {
+  width: 100%;
+  height: 420px;
+  border-radius: 12px;
+  object-fit: cover;
+}
+.staff .img {
+  height: 420px;
+  background-size: cover;
+  border-radius: 12px;
+}
+@media (min-width: 992px) {
+  section {
+    padding: 90px 0;
+  }
+}
+.navbar-nav {
+  align-items: center;
+}
+
+.nav-link {
+  font-size: 15px;
+}
+/* About Section Professional Look */
+.vs-wrap-about {
+  background: #fafafa;
+}
+
+.vs-wrap-about p {
+  font-size: 16px;
+  line-height: 1.9;
+  color: #444;
+}
+
+.vs-wrap-about .time span {
+  display: block;
+  margin-top: 10px;
+  font-weight: 500;
+}
+/* ===== SECTION HEADING STYLE (Professional) ===== */
+.section-title {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.section-title .script {
+  font-family: 'Great Vibes', cursive;
+  font-size: 64px;
+  color: #9ccc65;
+  line-height: 1;
+}
+
+.section-title h2 {
+  font-size: 36px;
+  font-weight: 700;
+  margin-top: -10px;
+  color: #2e2e2e;
+}
+
+/* Mobile fix */
+@media (max-width: 576px) {
+  .section-title .script {
+    font-size: 42px;
+  }
+  .section-title h2 {
+    font-size: 26px;
+  }
+}
+
+
+
     </style>
   </head>
   <body>
@@ -199,9 +450,9 @@
 
     <section class="vs-section vs-wrap-about">
       <div class="container">
-        <div class="row">
+        <div class="row align-items-center">
           <div class="col-md-7 d-flex justify-content-center">
-            <video class="img img-2" autoplay muted loop playsinline style="width: 100%; max-width: 600px; height: auto; border-radius: 10px;">
+            <video class="img img-2" autoplay muted loop playsinline>
               <source src="images/video1.mp4" type="video/mp4">
               Your browser does not support the video tag.
             </video>

@@ -18,6 +18,84 @@
     <link rel="stylesheet" href="css/flaticon.css">
     <link rel="stylesheet" href="css/icomoon.css">
     <link rel="stylesheet" href="css/style.css">
+	<style>
+/* Navbar Professional Look
+.main-navbar {
+  background: #3a4146;
+  padding: 14px 0;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.15);
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 999;
+}
+
+.navbar-brand {
+  font-family: 'Great Vibes', cursive;
+  font-size: 38px;
+  color: #9ccc65 !important;
+  font-weight: 400;
+}
+.navbar-brand:hover {
+  color: #aed581 !important;
+}
+
+.nav-link {
+  color: #e0e0e0 !important;
+  margin: 0 10px;
+  font-weight: 500;
+  font-size: 15px;
+}
+.nav-link:hover,
+.nav-link.active {
+  color: #9ccc65 !important;
+}
+
+.nav-item.cta .nav-link {
+  background: #7cb342;
+  color: #fff !important;
+  padding: 8px 18px;
+  border-radius: 6px;
+  font-weight: 600;
+  transition: 0.3s ease;
+}
+.nav-item.cta .nav-link:hover {
+  background: #689f38;
+}
+
+/* ===== FORCE BOLD MENU TABS ===== */
+.navbar-brand {
+  font-family: 'Great Vibes', cursive !important;
+  font-size: 42px;
+  font-weight: 400;
+  letter-spacing: 1.5px;
+  color: #9ccc65 !important;
+}
+
+/* Hover effect */
+.navbar-brand:hover {
+  color: #aed581 !important;
+}
+
+/* Footer Brand */
+.vs-footer-widget h2,
+.vs-heading-2 {
+  font-family: 'Great Vibes', cursive;
+  font-size: 32px;
+  font-weight: 400;
+  letter-spacing: 1.2px;
+  color: #9ccc65;
+}
+
+/* Mobile adjustment */
+@media (max-width: 768px) {
+  .navbar-brand {
+    font-size: 32px;
+  }
+}
+
+
+</style>
   </head>
   <body>
     <div class="py-1 bg-black top">
@@ -1786,5 +1864,33 @@
     <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" 
          alt="Chat on WhatsApp" width="40" height="40">
 </a>   
+<!-- <script>
+document.addEventListener("DOMContentLoaded", function () {
+  const tabs = document.querySelectorAll(".menu-tab");
+  const indicator = document.querySelector(".menu-tab-indicator");
+
+  function moveIndicator(tab) {
+    indicator.style.width = tab.offsetWidth + "px";
+    indicator.style.left = tab.offsetLeft + "px";
+  }
+
+  const activeTab = document.querySelector(".menu-tab.active");
+  if (activeTab) moveIndicator(activeTab);
+
+  tabs.forEach(tab => {
+    tab.addEventListener("click", function () {
+      tabs.forEach(t => t.classList.remove("active"));
+      this.classList.add("active");
+      moveIndicator(this);
+    });
+  });
+
+  window.addEventListener("resize", () => {
+    const activeTab = document.querySelector(".menu-tab.active");
+    if (activeTab) moveIndicator(activeTab);
+  });
+});
+</script> -->
+
   </body>
 </html>

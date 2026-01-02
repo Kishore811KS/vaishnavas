@@ -23,6 +23,203 @@
   <link rel="stylesheet" href="css/icomoon.css">
   <link rel="stylesheet" href="css/style.css">
 </head>
+<style>
+  /* ===== Vaishnavas Logo Font (Professional) ===== */
+.navbar-brand {
+  font-family: 'Great Vibes', cursive !important;
+  font-size: 38px;
+  font-weight: 400;
+  color: #9ccc65 !important; /* elegant green */
+  line-height: 1;
+  letter-spacing: 1px;
+}
+
+/* Hover effect */
+.navbar-brand:hover {
+  color: #aed581 !important;
+}
+
+/* Mobile size fix */
+@media (max-width: 768px) {
+  .navbar-brand {
+    font-size: 30px;
+  }
+}
+
+
+/* ===============================
+   CONTACT PAGE PROFESSIONAL UI
+================================ */
+
+/* Section background */
+.contact-section {
+  background: #f9faf7;
+}
+
+/* Contact form card */
+.contact-section .col-md-6.order-md-last {
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+}
+
+/* Heading */
+.contact-section h2 {
+  font-size: 30px;
+  font-weight: 600;
+  color: #2e2e2e;
+  position: relative;
+  padding-bottom: 10px;
+}
+
+.contact-section h2::after {
+  content: "";
+  width: 60px;
+  height: 3px;
+  background: #9ccc65;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+/* Input fields */
+.contact-section .form-control {
+  height: 52px;
+  border-radius: 10px;
+  border: 1px solid #e2e2e2;
+  font-size: 15px;
+  padding-left: 15px;
+}
+
+.contact-section textarea.form-control {
+  height: auto;
+}
+
+/* Input focus */
+.contact-section .form-control:focus {
+  border-color: #9ccc65;
+  box-shadow: 0 0 0 0.2rem rgba(156,204,101,0.25);
+}
+
+/* Send Message Button */
+.contact-section .btn-primary {
+  background: linear-gradient(135deg, #9ccc65, #7cb342);
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.contact-section .btn-primary:hover {
+  background: linear-gradient(135deg, #7cb342, #689f38);
+  transform: translateY(-2px);
+}
+
+/* Google map styling */
+.contact-section iframe {
+  border-radius: 16px;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+}
+
+/* ===============================
+   CONTACT INFO – PROFESSIONAL UI
+================================ */
+
+.contact-info {
+  margin-top: 60px;
+}
+
+/* Section heading */
+.contact-info h2 {
+  font-size: 32px;
+  font-weight: 600;
+  color: #2c2c2c;
+  position: relative;
+  padding-bottom: 12px;
+}
+
+.contact-info h2::after {
+  content: "";
+  width: 50px;
+  height: 3px;
+  background: #7cb342; /* muted premium green */
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+/* Info cards */
+.contact-info .dbox {
+  background: #ffffff;
+  padding: 28px 26px;
+  border-radius: 18px;
+  box-shadow: 0 15px 35px rgba(0,0,0,0.06);
+  height: 100%;
+  transition: all 0.3s ease;
+}
+
+/* Hover effect (desktop) */
+.contact-info .dbox:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 45px rgba(0,0,0,0.08);
+}
+
+/* Label text */
+.contact-info .dbox span {
+  display: block;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  color: #7cb342;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+
+/* ===== Contact Info Text Color Fix ===== */
+
+/* Phone number & website link in black */
+.contact-info .dbox a {
+  color: #1e1e1e !important;
+  font-weight: 500;
+}
+
+/* Hover effect (still professional, no green) */
+.contact-info .dbox a:hover {
+  color: #000000 !important;
+  text-decoration: underline;
+}
+
+
+.contact-info .dbox a:hover {
+  color: #33691e;
+  text-decoration: none;
+}
+
+/* Mobile view improvements */
+@media (max-width: 768px) {
+  .contact-info {
+    margin-top: 40px;
+  }
+
+  .contact-info h2 {
+    font-size: 26px;
+    text-align: center;
+  }
+
+  .contact-info h2::after {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .contact-info .dbox {
+    margin-bottom: 20px;
+    text-align: center;
+  }
+}
+
+
+</style>
 <body>
 
   <!-- Top Bar -->

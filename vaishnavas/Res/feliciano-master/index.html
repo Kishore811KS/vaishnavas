@@ -7,6 +7,7 @@
     
     <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Great+Vibes&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     
@@ -23,129 +24,502 @@
     <link rel="stylesheet" href="css/icomoon.css">
     <link rel="stylesheet" href="css/style.css">
     
-    <style>
-      /* Mobile Responsive Fixes */
-      @media (max-width: 768px) {
-        /* Fix for top header */
-        .top .col-md-5 {
-          text-align: center !important;
-          justify-content: center !important;
-        }
-        
-        /* Fix for featured menu items */
-        .featured-menus {
-          margin-bottom: 20px;
-        }
-        
-        /* Fix for about section layout */
-        .vs-wrap-about .img {
-          margin-bottom: 20px;
-          height: 400px;
-        }
-        
-        /* Fix menu items stacking */
-        .menus {
-          flex-direction: column;
-        }
-        
-        .menu-img {
-          width: 100% !important;
-          height: 200px !important;
-        }
-        
-        /* Fix counter section */
-        .vs-counter .col-md-3 {
-          text-align: center !important;
-          margin-top: 20px;
-        }
-        
-        /* Fix services section */
-        .services {
-          margin-bottom: 30px;
-        }
-        
-        /* Fix footer columns */
-        .vs-footer-widget {
-          margin-bottom: 30px;
-          text-align: center;
-        }
-        
-        .vs-footer-social {
-          justify-content: center;
-        }
-        
-        /* Fix slider text */
-        .slider-text h1 {
-          font-size: 1.8rem !important;
-        }
-        
-        .slider-text .subheading {
-          font-size: 1rem !important;
-        }
-      }
+  <style>
+/* ======================
+   GLOBAL DESIGN
+====================== */
+body {
+  font-family: 'Poppins', sans-serif;
+  color: #333;
+  line-height: 1.7;
+  background-color: #ffffff;
+}
 
-      /* Extra small devices */
-      @media (max-width: 576px) {
-        .container, .container-fluid {
-          padding-left: 15px;
-          padding-right: 15px;
-        }
-        
-        .slider-text h1 {
-          font-size: 1.5rem !important;
-        }
-        
-        .heading-section h2 {
-          font-size: 1.5rem;
-        }
-        
-        /* Fix top bar layout */
-        .top .d-flex {
-          flex-direction: column;
-          text-align: center;
-        }
-        
-        .top .col-md {
-          margin-bottom: 10px;
-        }
-        
-        /* Fix counter numbers */
-        .block-18 .number {
-          font-size: 1.8rem;
-        }
-        
-        /* Fix menu item layout */
-        .menus .text {
-          padding: 15px;
-        }
-        
-        /* Fix why choose us cards */
-        .card-body .col-md-6 {
-          margin-bottom: 15px;
-        }
-      }
+h1, h2, h3, h4, h5 {
+  font-family: 'Playfair Display', serif;
+  font-weight: 600;
+}
 
-      /* Ensure images are responsive */
-      img, .menu-img {
-        max-width: 100%;
-        height: auto;
-      }
+.subheading {
+  font-family: 'Great Vibes', cursive;
+  font-size: 28px;
+  color: #c62828;
+}
 
-      /* Fix for Bootstrap 5 compatibility */
-      .navbar-toggler:focus {
-        box-shadow: none;
-      }
-      
-      /* Fix navbar brand positioning */
-      .navbar-brand {
-        margin-right: auto;
-      }
-      
-      /* Ensure proper spacing in footer */
-      .vs-footer .row.mb-5 {
-        margin-bottom: 2rem !important;
-      }
-    </style>
+/* ======================
+   NAVBAR STYLE
+====================== */
+.vs-navbar {
+  padding: 15px 0;
+  background-color: #000;
+}
+
+
+.navbar-brand {
+  font-family: 'Great Vibes', cursive;
+  font-size: 34px;
+}
+
+.navbar-nav .nav-link {
+  font-weight: 500;
+  margin-left: 15px;
+  transition: color 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover {
+  color: #2e7d32 !important;
+}
+
+/* ======================
+   HERO SLIDER
+====================== */
+.slider-text h1 {
+  font-size: 3rem;
+  letter-spacing: 1px;
+}
+
+.slider-text .subheading {
+  color: #ffffff;
+}
+
+.overlay {
+  background: rgba(0,0,0,0.65);
+}
+
+/* ======================
+   FEATURED MENU CARDS
+====================== */
+.featured-menus {
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 8px 18px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.featured-menus:hover {
+  transform: translateY(-8px);
+}
+
+/* ======================
+   MENU ITEMS
+====================== */
+.menus {
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.08);
+}
+
+.price {
+  color: #c62828;
+  font-weight: 600;
+}
+
+/* ======================
+   COUNTER
+====================== */
+.block-18 {
+  background: #ffffff;
+  padding: 25px;
+  border-radius: 12px;
+}
+
+.block-18 .number {
+  font-size: 36px;
+  color: #2e7d32;
+  font-weight: bold;
+}
+
+/* ======================
+   FOOTER
+====================== */
+.vs-footer {
+  background: #121212;
+}
+
+.vs-footer a:hover {
+  color: #2e7d32;
+}
+
+
+/* space between image & text */
+.vs-wrap-about .wrap-about {
+  padding-left: 30px;
+}
+
+/* owners text style */
+.owners {
+  font-size: 14px;
+  color: #777;
+  margin-bottom: 10px;
+  font-style: italic;
+}
+
+/* ======================
+   ABOUT IMAGES UNIFORM SIZE
+====================== */
+.vs-wrap-about .img {
+  width: 100%;
+  height: 420px;              /* SAME HEIGHT FOR BOTH */
+  border-radius: 18px;
+  overflow: hidden;
+  background-size: cover;
+  background-position: center;
+}
+
+.vs-wrap-about .img-1 {
+  margin-right: 15px;
+}
+
+.vs-wrap-about .img-2 {
+  margin-left: 15px;
+}
+
+.vs-wrap-about .col-md-7 {
+  align-items: stretch;
+}
+
+@media (max-width: 768px) {
+
+  /* Keep height for background-image div */
+  .vs-wrap-about .img {
+    height: 260px;   /* mobile-friendly height */
+  }
+
+  /* Video full visibility */
+  .vs-wrap-about video {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+
+  /* Background image handling */
+  .vs-wrap-about .img-2 {
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  .vs-wrap-about .img-1,
+  .vs-wrap-about .img-2 {
+    margin-bottom: 15px;
+  }
+}
+
+
+  .vs-wrap-about .img-1,
+  .vs-wrap-about .img-2 {
+    margin: 0 0 15px 0;
+  }
+  .vs-wrap-about img,
+  .vs-wrap-about video {
+    width: 100%;
+    height: auto !important;
+    object-fit: contain !important;
+  }
+
+.about-video {
+  border-radius: 20px;
+}
+.vs-wrap-about .img {
+  margin-bottom: 20px;
+}
+
+/* =========================
+   NAVBAR BRAND – MOBILE FRIENDLY
+========================= */
+.navbar-brand {
+  font-family: 'Great Vibes', cursive;
+  line-height: 1.1;
+}
+
+
+
+.slider-text h1 {
+  font-size: 1.8rem !important;
+}
+@media (max-width: 576px) {
+  .slider-text h1 {
+    font-size: 1.5rem !important;
+  }
+  .slider-text .subheading {
+    font-size: 0.95rem !important;
+  }
+}
+@media (max-width: 768px) {
+  .vs-wrap-about .img {
+    margin-bottom: 20px;
+  }
+
+  .vs-wrap-about .wrap-about {
+    padding-top: 20px;
+  }
+}
+@media (max-width: 768px) {
+  .card-body .d-flex {
+    padding: 10px 0;
+  }
+
+  .card-body p {
+    font-size: 0.95rem;
+  }
+}
+.menus {
+  flex-direction: column;
+}
+.menu-img {
+  height: 160px;
+}
+@media (max-width: 768px) {
+  .vs-footer-widget h2 {
+    margin-bottom: 10px;
+  }
+
+  .vs-footer-widget p {
+    font-size: 0.9rem;
+  }
+}
+@media (max-width: 768px) {
+  .navbar-brand {
+    text-align: left;
+  }
+}
+
+/* =========================
+   NAVBAR BRAND – FINAL FIX
+========================= */
+
+.navbar-brand {
+  padding: 0;
+  margin-right: auto;
+  white-space: normal;
+}
+
+/* Desktop brand */
+.brand-desktop {
+  font-family: 'Great Vibes', cursive;
+  font-size: 34px;
+  color: #fff;
+  display: inline-block;
+}
+
+/* Mobile brand hidden by default */
+.brand-mobile {
+  display: none;
+}
+
+/* =========================
+   MOBILE VIEW
+========================= */
+@media (max-width: 768px) {
+
+  /* Hide desktop text */
+  .brand-desktop {
+    display: none;
+  }
+
+ 
+
+  .brand-mobile strong {
+    font-size: 20px;
+    font-weight: 600;
+    color: #ffffff;
+  }
+
+  .brand-mobile small {
+    font-size: 11px;
+    letter-spacing: 0.5px;
+    color: #cccccc;
+  }
+}
+
+/* =========================
+   PREMIUM MOBILE BRAND STYLE
+========================= */
+@media (max-width: 768px) {
+
+  .brand-mobile {
+    display: block;
+    max-width: 240px;
+    line-height: 1.1;
+  }
+
+  /* Brand Name */
+  .brand-mobile strong {
+    font-family: 'Great Vibes', cursive;
+    font-size: 26px;
+    font-weight: 400;
+    color: #ffffff;
+    letter-spacing: 1px;
+  }
+
+  /* Subtitle */
+  .brand-mobile small {
+    display: block;
+    font-family: 'Playfair Display', serif;
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 1.2px;
+    margin-top: 4px;
+    color: #dcdcdc;
+  }
+}
+.brand-mobile strong {
+  text-shadow: 0 1px 2px rgba(0,0,0,0.4);
+}
+
+
+/* =========================
+   MOBILE NAVBAR SCROLL FIX
+========================= */
+
+/* When navbar becomes light on scroll */
+.vs-navbar-light.scrolled,
+.vs-navbar-light.awake {
+  background: #ffffff !important;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+}
+
+/* Brand color fix on scroll */
+.vs-navbar-light.scrolled .brand-mobile strong,
+.vs-navbar-light.awake .brand-mobile strong {
+  color: #222222 !important;
+  text-shadow: none;
+}
+
+.vs-navbar-light.scrolled .brand-mobile small,
+.vs-navbar-light.awake .brand-mobile small {
+  color: #555555 !important;
+}
+
+/* Toggler color on scroll */
+.vs-navbar-light.scrolled .navbar-toggler,
+.vs-navbar-light.awake .navbar-toggler {
+  filter: invert(1);
+}
+
+/* Reduce navbar height on scroll (mobile) */
+@media (max-width: 768px) {
+  .vs-navbar-light.scrolled,
+  .vs-navbar-light.awake {
+    padding: 8px 0 !important;
+  }
+}
+@media (max-width: 768px) {
+  .vs-navbar-light.scrolled .brand-mobile small {
+    display: none;
+  }
+}
+/* =========================
+   MOBILE SCROLL BRAND COLOR – GREEN
+========================= */
+@media (max-width: 768px) {
+
+  /* When navbar becomes white on scroll */
+  .vs-navbar-light.scrolled .brand-mobile strong,
+  .vs-navbar-light.awake .brand-mobile strong {
+    color: #2e7d32 !important; /* Premium green */
+    text-shadow: none;
+  }
+
+}
+/* =========================
+   HERO BRAND TEXT – EXTRA BIG MOBILE
+========================= */
+@media (max-width: 768px) {
+
+  /* Vaishnavas Thattu Idli Kadai */
+  .home-slider .slider-text .subheading {
+    font-family: 'Great Vibes', cursive !important;
+    font-size: 2.1rem !important;     /* MUCH BIGGER */
+    line-height: 1.25 !important;
+    letter-spacing: 1.5px;
+    margin-bottom: 14px;
+    display: block;
+    color: #d9f99d;                   /* premium veg green */
+    text-shadow: 
+      0 2px 4px rgba(0,0,0,0.6),
+      0 4px 10px rgba(0,0,0,0.5);
+  }
+
+  /* PURE VEG RESTAURANT */
+  .home-slider .slider-text h1 {
+    font-size: 2.1rem !important;
+    letter-spacing: 3px;
+    font-weight: 700;
+  }
+}
+
+/* SMALL PHONES (VERY IMPORTANT) */
+@media (max-width: 480px) {
+
+  .home-slider .slider-text .subheading {
+    font-size: 2.3rem !important;   /* EVEN BIGGER */
+  }
+
+  .home-slider .slider-text h1 {
+    font-size: 1.95rem !important;
+  }
+}
+.home-slider .slider-text .subheading {
+  color: #ffffff !important;
+}
+.home-slider .slider-text h1 {
+  color: #2e7d32 !important; /* premium veg green */
+}
+
+
+/* =====================================
+   MOBILE NAVBAR BRAND – BIG & VISIBLE
+===================================== */
+@media (max-width: 768px) {
+
+  .brand-mobile {
+    display: block !important;
+    max-width: 280px;
+    line-height: 1.15;
+  }
+
+  /* Vaishnavas */
+  .brand-mobile strong {
+    font-family: 'Great Vibes', cursive !important;
+    font-size: 32px !important;        /* 🔥 BIGGER */
+    font-weight: 400;
+    color: #ffffff !important;         /* light green */
+    letter-spacing: 1.2px;
+    text-shadow:
+      0 2px 4px rgba(0,0,0,0.7),
+      0 0 6px rgba(154,245,157,0.6);
+  }
+
+  /* Thattu Idli Kadai · Saligramam */
+  .brand-mobile small {
+    display: block !important;
+    font-family: 'Playfair Display', serif;
+    font-size: 14px !important;        /* 🔥 BIGGER */
+    font-weight: 500;
+    margin-top: 4px;
+    letter-spacing: 1.4px;
+    color: #dff2e0 !important;         /* very light green */
+    text-shadow: 0 1px 3px rgba(0,0,0,0.6);
+  }
+
+  /* When navbar turns white on scroll */
+  .vs-navbar-light.scrolled .brand-mobile strong,
+  .vs-navbar-light.awake .brand-mobile strong {
+    color: #2e7d32 !important;
+    text-shadow: none;
+  }
+
+  .vs-navbar-light.scrolled .brand-mobile small,
+  .vs-navbar-light.awake .brand-mobile small {
+    color: #4caf50 !important;
+  }
+}
+
+
+  </style>
+
+
   </head>
   <body>
     <div class="py-1 bg-black top">
@@ -169,7 +543,17 @@
     
     <nav class="navbar navbar-expand-lg navbar-dark vs_navbar bg-dark vs-navbar-light" id="vs-navbar">
       <div class="container">
-        <a class="navbar-brand" href="index.html">Vaishnavas</a>
+        <a class="navbar-brand" href="index.html">
+  <span class="brand-desktop">
+    Vaishnavas Thattu Idli Kadai
+  </span>
+
+  <span class="brand-mobile">
+    <strong>Vaishnavas</strong><br>
+    <small>Thattu Idli Kadai · Saligramam</small>
+  </span>
+</a>
+
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#vs-nav" aria-controls="vs-nav" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -205,7 +589,7 @@
         <div class="container">
           <div class="row slider-text js-fullheight justify-content-center align-items-center" data-scrollax-parent="true">
             <div class="col-md-12 col-sm-12 text-center vs-animate">
-              <span class="subheading">Vaishnavas</span>
+              <span class="subheading">Vaishnavas Thattu Idli Kadai</span>
               <h1 class="mb-4">Nutritious &amp; Tasty</h1>
             </div>
           </div>
@@ -263,7 +647,7 @@
   <section class="vs-section vs-wrap-about">
     <div class="container">
       <div class="row">
-        <div class="col-md-7 d-flex flex-column flex-md-row">
+       <div class="col-md-7 d-flex flex-column flex-md-row gap-3">
           <div class="img img-1 mr-md-2 mb-3 mb-md-0">
             <video autoplay muted loop style="width: 100%; height: 100%; object-fit: cover;">
               <source src="images/v1.mp4" type="video/mp4">
@@ -272,18 +656,25 @@
           </div>
           <div class="img img-2 ml-md-2" style="background-image: url(images/image1.jpg);"></div>
         </div>
-        <p>Owners - Sudha Nehru and Suba Ganesh</p>
         <div class="col-md-5 wrap-about pt-5 pt-md-5 pb-md-3 vs-animate">
-          <div class="heading-section mb-4 my-5 my-md-0">
-            <span class="subheading">About</span>
-            <h2 class="mb-4">Vaishnavas Restaurant</h2>
-          </div>
-          <p>At Vaishnavas Veg Restaurant, we bring you the authentic flavors of vegetarian cuisine, crafted with love and tradition. Inspired by the rich heritage of Indian cooking, our menu features a variety of mouthwatering dishes made from fresh, high-quality ingredients. Whether you're craving South Indian specialties, North Indian classics, or fusion delights, we have something for every palate.</p>
-          <p class="time">
-            <span>Mon - Sun <strong>2 PM - 11:30 PM</strong></span>
-            <span><a href="#"> 8525931044</a></span>
-          </p>
-        </div>
+  <p class="owners">Owners – Sudha Nehru & Suba Ganesh</p>
+
+  <div class="heading-section mb-4 my-5 my-md-0">
+    <span class="subheading">About</span>
+    <h2 class="mb-4">Vaishnavas Restaurant</h2>
+  </div>
+
+  <p>
+    At Vaishnavas Veg Restaurant, we bring you the authentic flavors of vegetarian cuisine,
+    crafted with love and tradition...
+  </p>
+
+  <p class="time">
+    <span>Mon - Sun <strong>2 PM - 11:30 PM</strong></span>
+    <span><a href="#">8525931044</a></span>
+  </p>
+</div>
+
       </div>
     </div>
   </section>
@@ -647,5 +1038,194 @@
         <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" 
              alt="Chat on WhatsApp" width="40" height="40">
     </a>
+    <style>
+      /* Mobile Responsive Fixes */
+      /* =========================
+   GLOBAL FIXES
+========================= */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.navbar-toggler:focus {
+  box-shadow: none;
+}
+
+.navbar-brand {
+  margin-right: auto;
+}
+
+.vs-footer .row.mb-5 {
+  margin-bottom: 2rem !important;
+}
+
+/* =========================
+   TABLET & MOBILE (≤768px)
+========================= */
+@media (max-width: 768px) {
+
+  /* Top header */
+  .top .col-md-5 {
+    text-align: center !important;
+    justify-content: center !important;
+  }
+
+  /* Featured menu cards */
+  .featured-menus {
+    margin-bottom: 20px;
+  }
+
+  /* Menu layout */
+  .menus {
+    flex-direction: column;
+    border-radius: 14px;
+    overflow: hidden;
+  }
+
+  .menu-img {
+    width: 100%;
+    height: 160px;
+    border-radius: 12px;
+  }
+
+  .menus .text {
+    padding: 18px;
+    text-align: center;
+  }
+
+  .menus h3 {
+    font-size: 1.1rem;
+  }
+
+  .price {
+    font-size: 1rem;
+  }
+
+  /* Slider text */
+  .slider-text h1 {
+    font-size: 1.8rem !important;
+  }
+
+  .slider-text .subheading {
+    font-size: 1rem !important;
+  }
+
+  /* About section */
+  .vs-wrap-about {
+    padding: 40px 0;
+  }
+
+  .vs-wrap-about .wrap-about,
+  .vs-wrap-about .owners {
+    text-align: center;
+  }
+
+  /* Counter */
+  .vs-counter .col-md-3 {
+    text-align: center !important;
+    margin-top: 20px;
+  }
+
+  .vs-counter .block-18 {
+    margin-bottom: 20px;
+  }
+
+  .vs-counter p {
+    margin-top: 20px;
+    font-style: italic;
+  }
+
+  /* Services */
+  .services {
+    margin-bottom: 30px;
+  }
+
+  /* Why choose us */
+  .card-body .d-flex {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .card-body i {
+    margin-bottom: 10px;
+  }
+
+  /* Footer */
+  .vs-footer-widget {
+    margin-bottom: 30px;
+    text-align: center;
+  }
+
+  .vs-footer-social {
+    justify-content: center;
+  }
+
+  /* Navbar */
+  .navbar-nav {
+    text-align: center;
+  }
+
+  .navbar-nav .nav-link {
+    padding: 12px 0;
+  }
+}
+
+/* =========================
+   EXTRA SMALL (≤576px)
+========================= */
+@media (max-width: 576px) {
+
+  .container,
+  .container-fluid {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .slider-text h1 {
+    font-size: 1.5rem !important;
+  }
+
+  .heading-section h2 {
+    font-size: 1.5rem;
+  }
+
+  .top .d-flex {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .top .col-md {
+    margin-bottom: 10px;
+  }
+
+  .block-18 .number {
+    font-size: 1.8rem;
+  }
+
+  .card-body .col-md-6 {
+    margin-bottom: 15px;
+  }
+}
+/* =========================
+   MOBILE: Clean Why Choose Us
+========================= */
+@media (max-width: 768px) {
+
+  .heading-section .subheading {
+    font-size: 36px !important;
+    line-height: 1.1;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .vs-section.bg-light .card {
+    margin-top: 30px;
+  }
+
+}
+
+
+    </style>
   </body>
 </html>
