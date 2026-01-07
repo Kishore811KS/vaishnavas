@@ -7,6 +7,7 @@
     <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Great+Vibes&display=swap" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
     <link rel="stylesheet" href="css/animate.css">
     <link rel="stylesheet" href="css/owl.carousel.min.css">
@@ -203,6 +204,88 @@
     font-size: 20px;
   }
 }
+/* =====================================
+   NAVBAR BRAND – PROFESSIONAL HIERARCHY
+===================================== */
+
+.navbar-brand.logo-text {
+  display: inline-block;
+  line-height: 1.1;
+  padding: 6px 0;
+  text-align: left;
+  white-space: nowrap;
+}
+
+/* SALIGRAMAM (top – small & premium) */
+.logo-top {
+  display: block;
+  font-family: 'Poppins', sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: #FFD700;               /* premium gold */
+  opacity: 0.9;
+}
+
+/* VAISHNAVAS (main – bold & authoritative) */
+.logo-main {
+  display: block;
+  font-family: 'Cinzel', serif;
+  font-size: 34px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: #2e7d32;
+}
+
+/* THATTU IDLY KADAI (subtitle – spaced & elegant) */
+.logo-sub {
+  display: block;
+  font-family: 'Cinzel', serif;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: #222222;
+  opacity: 0.85;
+}
+@media (max-width: 768px) {
+  .logo-top {
+    font-size: 10px;
+    letter-spacing: 2.5px;
+  }
+
+  .logo-main {
+    font-size: 26px;
+    letter-spacing: 1.3px;
+  }
+
+  .logo-sub {
+    font-size: 11px;
+    letter-spacing: 2.2px;
+  }
+}
+.vs-navbar-light.scrolled,
+.vs-navbar-light.awake {
+  background: #ffffff !important;
+}
+
+/* On scroll */
+.vs-navbar-light.scrolled .logo-top,
+.vs-navbar-light.awake .logo-top {
+  color: #f1f12a; /* maroon */
+}
+
+.vs-navbar-light.scrolled .logo-main,
+.vs-navbar-light.awake .logo-main {
+  color: #2e7d32; /* premium veg green */
+}
+
+.vs-navbar-light.scrolled .logo-sub,
+.vs-navbar-light.awake .logo-sub {
+  color: #222222;
+}
 
 </style>
   </head>
@@ -226,7 +309,11 @@
     </div>
 	  <nav class="navbar navbar-expand-lg navbar-dark vs_navbar bg-dark vs-navbar-light" id="vs-navbar">
 	    <div class="container">
-	      <a class="navbar-brand" href="index.html">Vaishnavas</a>
+	       <a class="navbar-brand logo-text" href="index.html">
+  <span class="logo-top">SALIGRAMAM</span>
+  <span class="logo-main">VAISHNAVAS</span>
+  <span class="logo-sub">THATTU IDLY KADAI</span>
+</a>
 	      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#vs-nav" aria-controls="vs-nav" aria-expanded="false" aria-label="Toggle navigation">
 	        <span class="oi oi-menu"></span> Menu
 	      </button>

@@ -13,6 +13,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;800&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;800&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Blackberry+Jam&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700;800&family=Playfair+Display:wght@400;600&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
 
 
 
@@ -745,76 +747,132 @@ h1, h2, h3, h4, h5 {
   }
 }
 /* =====================================
-   HERO TITLE – FINAL SIZE (FIXED)
+   HERO TITLE – PROFESSIONAL BOLD LOOK
 ===================================== */
 
 .home-slider .slider-text .subheading {
-  font-family: 'Cinzel', serif !important;
-  font-size: 3.35rem !important;   /* ✅ PERFECT DESKTOP */
-  font-weight: 700;
-  letter-spacing: 2px;
+  display: block;                         /* ensures it behaves as a block element */
+  font-family: 'Cinzel', serif !important; 
+  font-size: 3.35rem !important;          /* Desktop size */
+  font-weight: 800 !important;            /* bolder than before */
+  letter-spacing: 1.5px !important;       /* slightly tighter spacing */
   text-transform: uppercase;
   color: #ffffff !important;
   margin-bottom: 10px;
-  white-space: nowrap;             /* single line */
-  text-shadow: 0 2px 4px rgba(0,0,0,0.6);
+  white-space: nowrap;                     /* single line on desktop */
+  text-shadow: 0 3px 6px rgba(0,0,0,0.6); /* stronger shadow for depth */
 }
 
-/* MOBILE + TABLET – ALLOW MULTI LINE */
+/* MOBILE + TABLET – MULTI LINE RESPONSIVE */
 @media (max-width: 768px) {
   .home-slider .slider-text .subheading {
-    white-space: normal !important;   /* ✅ allow wrap */
+    white-space: normal !important;       /* allow wrapping */
     overflow: visible !important;
     text-overflow: unset !important;
     line-height: 1.4;
+    font-size: 2.2rem !important;         /* scaled down for smaller screens */
     text-align: center;
+    letter-spacing: 1.2px;
   }
 }
 
 @media (max-width: 480px) {
   .home-slider .slider-text .subheading {
-    white-space: normal !important;
+    font-size: 1.8rem !important;         /* mobile-friendly size */
     line-height: 1.35;
+    letter-spacing: 1px;
   }
 }
 
 
-/* ======================================================================
-   LOGO FONT – IMAGE MATCH STYLE
-   (NO EFFECT ON OTHER TEXT)
-================================ */
-
-/* SALIGRAMAM */
-.logo-top {
-  font-family: 'Cinzel', serif;
-  font-size: 12px;
-  font-weight: 600;
-  letter-spacing: 3px;
-  text-transform: uppercase;
-}
-
-/* VAISHNAVAS */
-.logo-main {
-  font-family: 'Cinzel', serif;
-  font-size: 34px;
-  font-weight: 800;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-}
-
-/* THATTU IDLY KADAI */
-.logo-sub {
-  font-family: 'Cinzel', serif;
-  font-size: 14px;
-  font-weight: 600;
-  letter-spacing: 3px;
-  text-transform: uppercase;
-}
 .home-slider .slider-text .subheading {
   font-family: 'Cinzel', serif;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 2px;
+}
+/* SALIGRAMAM – top small text, gold */
+.logo-top {
+  display: block;
+  font-family: 'Poppins', sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 2.5px;
+  color: #FFD700; /* gold */
+  text-transform: uppercase;
+  opacity: 0.9;
+}
+
+/* VAISHNAVAS – main brand, Classical Roman serif */
+.logo-main {
+  display: block;
+  font-family: 'Cinzel', serif;
+  font-size: 34px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+  color: #ffffff;
+  text-transform: uppercase;
+}
+
+/* THATTU IDLY KADAI – subtitle, lighter serif with spacing */
+.logo-sub {
+  display: block;
+  font-family: 'Playfair Display', serif;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 3px;
+  color: #ffffff;
+  text-transform: uppercase;
+  opacity: 0.85;
+}
+
+/* ================= MOBILE ADJUSTMENTS ================= */
+@media (max-width: 768px) {
+  .logo-top {
+    font-size: 10px;
+    letter-spacing: 2px;
+  }
+  .logo-main {
+    font-size: 26px;
+    letter-spacing: 1.2px;
+  }
+  .logo-sub {
+    font-size: 12px;
+    letter-spacing: 2.5px;
+  }
+}
+@media (max-width: 480px) {
+  .logo-top { font-size: 9px; }
+  .logo-main { font-size: 22px; }
+  .logo-sub { font-size: 10px; }
+}
+/* =====================================
+   DESKTOP SCROLL FIX – LOGO VISIBILITY
+===================================== */
+
+.vs-navbar-light.scrolled,
+.vs-navbar-light.awake {
+  background: #ffffff !important;
+}
+
+/* SALIGRAMAM */
+.vs-navbar-light.scrolled .logo-top,
+.vs-navbar-light.awake .logo-top {
+  color: #FFD700 !important; /* maroon */
+  opacity: 0.9;
+}
+
+/* VAISHNAVAS */
+.vs-navbar-light.scrolled .logo-main,
+.vs-navbar-light.awake .logo-main {
+  color: #2e7d32 !important; /* maroon */
+}
+
+/* THATTU IDLY KADAI */
+.vs-navbar-light.scrolled .logo-sub,
+.vs-navbar-light.awake .logo-sub {
+  color: #050505 !important;
+  opacity: 0.85;
 }
 
 
