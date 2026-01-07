@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Great+Vibes&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
     <link rel="stylesheet" href="css/animate.css">
     <link rel="stylesheet" href="css/owl.carousel.min.css">
@@ -93,7 +94,115 @@
     font-size: 32px;
   }
 }
+.navbar-brand {
+  font-family: 'Playfair Display', serif !important;
+  font-weight: 700 !important;
+  letter-spacing: 1.5px;
+  font-size: 35px;
+  color: #9ccc65 !important;
+  line-height: 1.1;
+}
+@media (max-width: 768px) {
+  .navbar-brand {
+    font-size: 22px;
+    letter-spacing: 1.2px;
+  }
+}
+/* ===== CENTER MOBILE MENU CONTENT ===== */
+@media (max-width: 991px) {
 
+  /* Center menu container */
+  #vs-nav {
+    text-align: center;
+  }
+
+  /* Center nav items */
+  .navbar-nav {
+    width: 100%;
+    align-items: center;
+    margin-top: 20px;
+  }
+
+  /* Each menu item center */
+  .navbar-nav .nav-item {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 14px;
+  }
+
+  /* Menu links */
+  .navbar-nav .nav-link {
+    display: inline-block;
+    font-size: 18px;
+  }
+
+  /* Center CTA button */
+  .navbar-nav .nav-item.cta .nav-link {
+    display: inline-block;
+    width: 90%;
+    max-width: 280px;
+    margin: 10px auto 0;
+    text-align: center;
+  }
+}
+/* ===== FOOTER HEADING FONT STYLES ===== */
+
+/* Brand name - Vaishnavas */
+.vs-footer-widget h2.vs-heading-2:first-of-type {
+  font-family: 'Great Vibes', cursive;
+  font-size: 34px;
+  font-weight: 400;
+  letter-spacing: 1.3px;
+  color: #9ccc65;
+}
+
+/* Section titles - Open Hours, Feedback */
+.vs-footer-widget h2.vs-heading-2:not(:first-of-type) {
+  font-family: 'Playfair Display', serif;
+  font-size: 22px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+
+/* Mobile adjustment */
+@media (max-width: 768px) {
+  .vs-footer-widget h2.vs-heading-2:first-of-type {
+    font-size: 28px;
+  }
+
+  .vs-footer-widget h2.vs-heading-2:not(:first-of-type) {
+    font-size: 18px;
+  }
+}
+/* ===== FOOTER HEADING FONT (MATCH SCREENSHOT) ===== */
+
+.vs-footer-widget h2.vs-heading-2 {
+  font-family: 'Poppins', sans-serif !important;
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  color: #ffffff;
+  text-transform: none;
+  margin-bottom: 12px;
+}
+
+/* Brand name slightly bigger */
+.vs-footer-widget h2.vs-heading-2:first-child {
+  font-size: 22px;
+}
+
+/* Mobile fine tuning */
+@media (max-width: 768px) {
+  .vs-footer-widget h2.vs-heading-2 {
+    font-size: 18px;
+  }
+
+  .vs-footer-widget h2.vs-heading-2:first-child {
+    font-size: 20px;
+  }
+}
 
 </style>
   </head>

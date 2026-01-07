@@ -217,7 +217,69 @@
     text-align: center;
   }
 }
+/* ===== NAVBAR BRAND FONT STYLE (REFERENCE MATCH) ===== */
+.navbar-brand {
+  font-family: 'Playfair Display', serif !important;
+  font-weight: 700 !important;
+  letter-spacing: 1.5px;
+  color: #9ccc65 !important;
+  line-height: 1.1;
+}
 
+/* Optional future-proofing:
+   if later you add span/small inside brand */
+.navbar-brand span,
+.navbar-brand small {
+  font-family: 'Poppins', sans-serif !important;
+  font-weight: 500;
+}
+
+/* ===============================
+   MOBILE NAV MENU – CENTER ALIGN
+================================ */
+@media (max-width: 991px) {
+
+  /* Center the collapsed menu container */
+  #vs-nav {
+    text-align: center;
+  }
+
+  /* Stack & center menu items */
+  .navbar-nav {
+    margin: 20px auto 0;
+    width: 100%;
+    align-items: center;
+  }
+
+  /* Remove Bootstrap spacing */
+  .navbar-nav .nav-item {
+    margin: 6px 0;   /* 👈 controls vertical gap */
+    width: 100%;
+    text-align: center;
+  }
+
+  /* Center menu text */
+  .navbar-nav .nav-link {
+    display: inline-block;
+    padding: 6px 0; /* 👈 tighter spacing */
+    font-size: 17px;
+    text-align: center;
+  }
+
+  /* Center CTA button */
+  .navbar-nav .nav-item.cta {
+    margin-top: 12px;
+  }
+
+  .navbar-nav .nav-item.cta .nav-link {
+    width: 90%;
+    max-width: 280px;
+    margin: 0 auto;
+    padding: 12px 0;
+    display: block;
+    text-align: center;
+  }
+}
 
 </style>
 <body>

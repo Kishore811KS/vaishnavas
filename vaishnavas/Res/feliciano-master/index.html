@@ -10,7 +10,12 @@
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Blackberry+Jam&display=swap" rel="stylesheet">
+
+
+
     <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
     <link rel="stylesheet" href="css/animate.css">
     <link rel="stylesheet" href="css/owl.carousel.min.css">
@@ -40,11 +45,11 @@ h1, h2, h3, h4, h5 {
   font-weight: 600;
 }
 
-.subheading {
+/* .subheading {
   font-family: 'Great Vibes', cursive;
   font-size: 28px;
   color: #c62828;
-}
+} */
 
 /* ======================
    NAVBAR STYLE
@@ -54,11 +59,6 @@ h1, h2, h3, h4, h5 {
   background-color: #000;
 }
 
-
-.navbar-brand {
-  font-family: 'Great Vibes', cursive;
-  font-size: 34px;
-}
 
 .navbar-nav .nav-link {
   font-weight: 500;
@@ -223,17 +223,6 @@ h1, h2, h3, h4, h5 {
 .vs-wrap-about .img {
   margin-bottom: 20px;
 }
-
-/* =========================
-   NAVBAR BRAND – MOBILE FRIENDLY
-========================= */
-.navbar-brand {
-  font-family: 'Great Vibes', cursive;
-  line-height: 1.1;
-}
-
-
-
 .slider-text h1 {
   font-size: 1.8rem !important;
 }
@@ -294,78 +283,6 @@ h1, h2, h3, h4, h5 {
   white-space: normal;
 }
 
-/* Desktop brand */
-.brand-desktop {
-  font-family: 'Great Vibes', cursive;
-  font-size: 34px;
-  color: #fff;
-  display: inline-block;
-}
-
-/* Mobile brand hidden by default */
-.brand-mobile {
-  display: none;
-}
-
-/* =========================
-   MOBILE VIEW
-========================= */
-@media (max-width: 768px) {
-
-  /* Hide desktop text */
-  .brand-desktop {
-    display: none;
-  }
-
- 
-
-  .brand-mobile strong {
-    font-size: 20px;
-    font-weight: 600;
-    color: #ffffff;
-  }
-
-  .brand-mobile small {
-    font-size: 11px;
-    letter-spacing: 0.5px;
-    color: #cccccc;
-  }
-}
-
-/* =========================
-   PREMIUM MOBILE BRAND STYLE
-========================= */
-@media (max-width: 768px) {
-
-  .brand-mobile {
-    display: block;
-    max-width: 240px;
-    line-height: 1.1;
-  }
-
-  /* Brand Name */
-  .brand-mobile strong {
-    font-family: 'Great Vibes', cursive;
-    font-size: 26px;
-    font-weight: 400;
-    color: #ffffff;
-    letter-spacing: 1px;
-  }
-
-  /* Subtitle */
-  .brand-mobile small {
-    display: block;
-    font-family: 'Playfair Display', serif;
-    font-size: 12px;
-    font-weight: 500;
-    letter-spacing: 1.2px;
-    margin-top: 4px;
-    color: #dcdcdc;
-  }
-}
-.brand-mobile strong {
-  text-shadow: 0 1px 2px rgba(0,0,0,0.4);
-}
 
 
 /* =========================
@@ -515,6 +432,390 @@ h1, h2, h3, h4, h5 {
     color: #4caf50 !important;
   }
 }
+/* =========================
+   NAVBAR LOGO – DESKTOP
+========================= */
+
+.logo-text {
+  display: inline-block;
+  line-height: 1.1;
+  text-align: left;
+  text-decoration: none;
+}
+
+/* Top small text */
+.logo-top {
+  display: block;
+  font-family: 'Poppins', sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 2.5px;
+  color: #cfcfcf;
+}
+
+/* Main brand */
+.logo-main {
+  display: block;
+  font-family: 'Playfair Display', serif;
+  font-size: 32px;
+  font-weight: 800;
+  letter-spacing: 2px;
+  color: #ffffff;
+}
+
+/* Subtitle */
+.logo-sub {
+  display: block;
+  font-family: 'Poppins', sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 2.3px;
+  color: #e0e0e0;
+}
+
+/* =========================
+   MOBILE ADJUSTMENTS
+========================= */
+@media (max-width: 768px) {
+
+  .logo-top {
+    font-size: 10px;
+    letter-spacing: 2px;
+  }
+
+  .logo-main {
+    font-size: 24px;
+    letter-spacing: 1.8px;
+  }
+
+  .logo-sub {
+    font-size: 11px;
+    letter-spacing: 2px;
+  }
+}
+
+/* =========================
+   VERY SMALL SCREENS
+========================= */
+@media (max-width: 480px) {
+
+  .logo-top {
+    font-size: 9px;
+  }
+
+  .logo-main {
+    font-size: 22px;
+  }
+
+  .logo-sub {
+    font-size: 10px;
+  }
+}
+/* =====================================
+   FINAL NAVBAR LOGO (DESKTOP + MOBILE)
+===================================== */
+
+.navbar-brand.logo-text {
+  padding: 4px 0;
+  line-height: 1.15;
+  white-space: nowrap;
+}
+
+/* Top small text */
+.logo-top {
+  font-family: 'Poppins', sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 2.5px;
+  color: #cfcfcf;
+}
+
+/* Main brand */
+.logo-main {
+  font-family: 'Playfair Display', serif;
+  font-size: 32px;
+  font-weight: 800;
+  letter-spacing: 2px;
+  color: #ffffff;
+}
+
+/* Subtitle */
+.logo-sub {
+  font-family: 'Poppins', sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 2.3px;
+  color: #e0e0e0;
+}
+
+/* ================= MOBILE ================= */
+@media (max-width: 768px) {
+
+  .logo-top {
+    font-size: 10px;
+    letter-spacing: 2px;
+  }
+
+  .logo-main {
+    font-size: 24px;
+    letter-spacing: 1.6px;
+  }
+
+  .logo-sub {
+    font-size: 11px;
+    letter-spacing: 2px;
+  }
+
+  /* Navbar scroll color fix */
+  .vs-navbar-light.scrolled .logo-top,
+  .vs-navbar-light.awake .logo-top,
+  .vs-navbar-light.scrolled .logo-sub,
+  .vs-navbar-light.awake .logo-sub {
+    color: #555;
+  }
+
+  .vs-navbar-light.scrolled .logo-main,
+  .vs-navbar-light.awake .logo-main {
+    color: #2e7d32; /* premium veg green */
+  }
+}
+/* ===============================
+   HERO SECTION – PURE MAROON ONLY
+================================ */
+
+/* Force maroon background everywhere */
+.home-slider,
+.home-slider .slider-item,
+.home-slider .overlay {
+  background: #4b0f0f !important; /* PURE MAROON */
+}
+
+/* Remove any gradients, images, greens */
+.home-slider .overlay {
+  background-image: none !important;
+}
+
+/* Keep flower garland untouched */
+.home-slider .garland,
+.home-slider img {
+  filter: none !important;
+}
+
+
+/* PURE VEG / NUTRITIOUS & TASTY – YELLOW */
+.home-slider .slider-text h1,
+.home-slider .slider-text .heading {
+  color: #f1f12a !important; /* YELLOW */
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  text-shadow: 0 3px 6px rgba(0,0,0,0.7);
+}
+
+  .home-slider .slider-text h1 {
+    font-size: 1.9rem;
+  }
+
+/* ===============================
+   HARD REMOVE GREEN (SAFETY)
+================================ */
+* {
+  --green: #4b0f0f;
+}
+
+.text-success,
+.fa-leaf,
+.fa-seedling,
+.fa-carrot {
+  color: #f6f664 !important;
+}
+
+/* ===============================
+   FLOWER GARLAND – FINAL WORKING
+================================ */
+
+/* Slider item must be relative */
+.home-slider .slider-item {
+  position: relative;
+}
+
+/* Garland layer */
+.home-slider .slider-item::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 90px;
+
+  background-image: url("images/flower-garland.png");
+  background-repeat: repeat-x;
+  background-position: top center;
+  background-size: auto 90px;
+
+  z-index: 20;       /* above overlay */
+  pointer-events: none;
+}
+
+/* Overlay BELOW garland */
+.home-slider .overlay {
+  z-index: 10;
+}
+
+/* Text ABOVE everything */
+.home-slider .slider-text {
+  position: relative;
+  z-index: 30;
+  padding-top: 120px;
+}
+@media (max-width: 768px) {
+  .home-slider .slider-item::before {
+    height: 65px;
+    background-size: auto 65px;
+  }
+
+  .home-slider .slider-text {
+    padding-top: 95px;
+  }
+}
+
+
+
+/* ===============================
+   NAVBAR LOGO – FINAL STYLE
+================================ */
+
+.navbar-brand.logo-text {
+  line-height: 1.1;
+  padding: 6px 0;
+  text-align: left;
+}
+
+/* SALIGRAMAM */
+.logo-top {
+  display: block;
+  font-family: 'Cinzel', serif;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 3px;
+  color: #ffffff;
+  opacity: 0.85;
+}
+
+/* VAISHNAVAS */
+.logo-main {
+  display: block;
+  font-family: 'Cinzel', serif;
+  font-size: 34px;
+  font-weight: 800;
+  letter-spacing: 2px;
+  color: #ffffff;
+  text-transform: uppercase;
+}
+
+/* THATTU IDLY KADAI */
+.logo-sub {
+  display: block;
+  font-family: 'Cinzel', serif;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 3px;
+  color: #ffffff;
+  opacity: 0.85;
+}
+
+/* ===============================
+   MOBILE FIX
+================================ */
+@media (max-width: 768px) {
+  .logo-top {
+    font-size: 10px;
+    letter-spacing: 2.5px;
+  }
+
+  .logo-main {
+    font-size: 26px;
+    letter-spacing: 1.6px;
+  }
+
+  .logo-sub {
+    font-size: 11px;
+    letter-spacing: 2.2px;
+  }
+}
+/* =====================================
+   HERO TITLE – FINAL SIZE (FIXED)
+===================================== */
+
+.home-slider .slider-text .subheading {
+  font-family: 'Cinzel', serif !important;
+  font-size: 3.35rem !important;   /* ✅ PERFECT DESKTOP */
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #ffffff !important;
+  margin-bottom: 10px;
+  white-space: nowrap;             /* single line */
+  text-shadow: 0 2px 4px rgba(0,0,0,0.6);
+}
+
+/* MOBILE + TABLET – ALLOW MULTI LINE */
+@media (max-width: 768px) {
+  .home-slider .slider-text .subheading {
+    white-space: normal !important;   /* ✅ allow wrap */
+    overflow: visible !important;
+    text-overflow: unset !important;
+    line-height: 1.4;
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .home-slider .slider-text .subheading {
+    white-space: normal !important;
+    line-height: 1.35;
+  }
+}
+
+
+/* ======================================================================
+   LOGO FONT – IMAGE MATCH STYLE
+   (NO EFFECT ON OTHER TEXT)
+================================ */
+
+/* SALIGRAMAM */
+.logo-top {
+  font-family: 'Cinzel', serif;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+
+/* VAISHNAVAS */
+.logo-main {
+  font-family: 'Cinzel', serif;
+  font-size: 34px;
+  font-weight: 800;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+/* THATTU IDLY KADAI */
+.logo-sub {
+  font-family: 'Cinzel', serif;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+.home-slider .slider-text .subheading {
+  font-family: 'Cinzel', serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
 
 
   </style>
@@ -543,15 +844,10 @@ h1, h2, h3, h4, h5 {
     
     <nav class="navbar navbar-expand-lg navbar-dark vs_navbar bg-dark vs-navbar-light" id="vs-navbar">
       <div class="container">
-        <a class="navbar-brand" href="index.html">
-  <span class="brand-desktop">
-    Vaishnavas Thattu Idli Kadai
-  </span>
-
-  <span class="brand-mobile">
-    <strong>Vaishnavas</strong><br>
-    <small>Thattu Idli Kadai · Saligramam</small>
-  </span>
+        <a class="navbar-brand logo-text" href="index.html">
+  <span class="logo-top">SALIGRAMAM</span>
+  <span class="logo-main">VAISHNAVAS</span>
+  <span class="logo-sub">THATTU IDLY KADAI</span>
 </a>
 
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#vs-nav" aria-controls="vs-nav" aria-expanded="false" aria-label="Toggle navigation">

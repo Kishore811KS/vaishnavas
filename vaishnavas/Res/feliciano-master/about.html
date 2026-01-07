@@ -9,6 +9,8 @@
     <link href="https://fonts.googleapis.com/css?family=Great+Vibes&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+
 
     <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
     <link rel="stylesheet" href="css/animate.css">
@@ -124,10 +126,7 @@
         box-shadow: none;
       }
       
-      /* Fix navbar brand positioning */
-      .navbar-brand {
-        margin-right: auto;
-      }
+
       
       /* Ensure proper spacing in footer */
       .vs-footer .row.mb-5 {
@@ -173,13 +172,13 @@
 }
 
 /* Brand name – same style as index */
-.navbar-brand {
+/* .navbar-brand {
   font-family: 'Great Vibes', cursive;
   font-size: 38px;
   color: #9ccc65 !important;
   font-weight: 400;
   line-height: 1;
-}
+} */
 .navbar {
   min-height: 80px;
   display: flex;
@@ -298,10 +297,6 @@ color: #333; } */
   color: #ccc;
 }
 @media (max-width: 576px) {
-  .navbar-brand {
-    font-size: 30px;
-  }
-
   .nav-item.cta {
     margin-top: 10px;
   }
@@ -310,17 +305,9 @@ color: #333; } */
     padding: 50px 0;
   }
 }
-/* FIX NAVBAR OVERLAP */
-body {
-  padding-top: 110px;
-}
 
-.navbar {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  z-index: 999;
-}
+
+
 /* .heading-section h2 {
   position: relative;
   z-index: 2;
@@ -401,13 +388,74 @@ body {
     font-size: 26px;
   }
 }
+.navbar-brand {
+  font-family: 'Playfair Display', serif !important;
+  font-size: 25px;
+  font-weight: 700;
+  letter-spacing: 1.8px;
+}
 
+
+/* 🔧 FIX: Prevent menu button appearing on scroll (Mobile) */
+@media (max-width: 991px) {
+  #vs-navbar {
+    position: sticky !important;
+    top: 0 !important;
+    transform: none !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+  }
+
+  .navbar-toggler {
+    display: block !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+  }
+}
+
+/* 🔧 FIX: Force solid dark navbar always */
+#vs-navbar,
+#vs-navbar.scrolled,
+#vs-navbar.awake,
+#vs-navbar.sleep {
+  background-color: #212529 !important; /* full black */
+}
+.top {
+  padding: 4px 0; /* tighter top bar */
+}
+#vs-navbar {
+  position: sticky;
+  top: 0;
+  background-color: #212529 !important;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.15);
+}
+
+/* 🔴 CRITICAL FIX: Stop scroll overlap */
+section,
+.vs-section {
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  transform: none !important;
+}
+#vs-navbar {
+  position: sticky;
+  top: 0;
+  z-index: 99999 !important;
+}
+@media (max-width: 768px) {
+  .vs-animate,
+  [data-scrollax] {
+    transform: none !important;
+    opacity: 1 !important;
+  }
+}
 
 
     </style>
   </head>
   <body>
-    <div class="py-1 bg-black top">
+    <div class="bg-black top">
       <div class="container">
         <div class="row no-gutters d-flex align-items-start align-items-center px-md-0">
           <div class="col-lg-12 d-block">
@@ -426,24 +474,32 @@ body {
       </div>
     </div>
     
-    <nav class="navbar navbar-expand-lg navbar-dark vs_navbar bg-dark vs-navbar-light" id="vs-navbar">
-      <div class="container">
-        <a class="navbar-brand" href="index.html">Vaishnavas</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#vs-nav" aria-controls="vs-nav" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark" id="vs-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="index.html">Vaishnavas</a>
 
-        <div class="collapse navbar-collapse" id="vs-nav">
-          <ul class="navbar-nav ms-auto">
-            <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
-            <li class="nav-item active"><a href="about.html" class="nav-link">About</a></li>
-            <li class="nav-item"><a href="menu.html" class="nav-link">Menu</a></li>
-            <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
-            <li class="nav-item cta"><a href="reservation.html" class="nav-link">Book a table</a></li>
-          </ul>
-        </div>
-      </div>
-    </nav>
+    <button class="navbar-toggler" type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#vs-nav"
+            aria-controls="vs-nav"
+            aria-expanded="false"
+            aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="vs-nav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+        <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
+        <li class="nav-item active"><a href="menu.html" class="nav-link">Menu</a></li>
+        <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+        <li class="nav-item cta"><a href="reservation.html" class="nav-link">Book a table</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
     <!-- END nav -->
     
    

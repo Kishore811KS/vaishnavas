@@ -58,6 +58,96 @@
     font-size: 32px;
   }
 }
+/* =====================================================
+   1️⃣ MOBILE NAV MENU – CENTER ALIGN (NO HTML CHANGE)
+===================================================== */
+@media (max-width: 991px) {
+
+  #vs-nav {
+    text-align: center;
+  }
+
+  .navbar-nav {
+    width: 100%;
+    margin: 20px auto 0;
+    align-items: center;
+  }
+
+  .navbar-nav .nav-item {
+    width: 100%;
+    text-align: center;
+    margin: 6px 0;
+  }
+
+  .navbar-nav .nav-link {
+    display: inline-block;
+    text-align: center;
+    padding: 6px 0;
+    font-size: 17px;
+  }
+
+  /* Center CTA button */
+  .navbar-nav .nav-item.cta {
+    margin-top: 14px;
+  }
+
+  .navbar-nav .nav-item.cta .nav-link {
+    display: block;
+    margin: 0 auto;
+    width: 90%;
+    max-width: 280px;
+    padding: 12px 0;
+  }
+}
+
+/* =====================================================
+   2️⃣ BRAND FONT STYLE (LIKE brand-mobile strong/small)
+   WITHOUT CHANGING HTML
+===================================================== */
+
+/* Main brand font (acts like <strong>) */
+.navbar-brand {
+  font-family: 'Playfair Display', serif !important;
+  font-weight: 700 !important;
+  letter-spacing: 1.5px;
+  color: #9ccc65 !important;
+}
+
+/* Subtle refinement if text wraps / future-proof */
+.navbar-brand::after {
+  content: "";
+  display: block;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  font-size: 0; /* invisible, keeps structure safe */
+}
+/* ===== FOOTER HEADING FONT (MATCH SCREENSHOT) ===== */
+
+.vs-footer-widget h2.vs-heading-2 {
+  font-family: 'Poppins', sans-serif !important;
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  color: #ffffff;
+  margin-bottom: 12px;
+}
+
+/* Make Vaishnavas slightly bigger */
+.vs-footer-widget:first-child h2.vs-heading-2 {
+  font-size: 22px;
+}
+
+/* Mobile fine tuning */
+@media (max-width: 768px) {
+  .vs-footer-widget h2.vs-heading-2 {
+    font-size: 18px;
+  }
+
+  .vs-footer-widget:first-child h2.vs-heading-2 {
+    font-size: 20px;
+  }
+}
+
 
     </style>
   <body>
