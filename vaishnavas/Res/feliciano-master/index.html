@@ -8,15 +8,14 @@
     <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Great+Vibes&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+    <!-- Add Arbutus Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Arbutus&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;800&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;800&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Blackberry+Jam&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700;800&family=Playfair+Display:wght@400;600&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
-
-
-
+    <!-- ADD ADABILE FONT -->
+    <link href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Cinzel:wght@400;700;800&family=Playfair+Display:wght@400;600&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
     <link rel="stylesheet" href="css/animate.css">
@@ -47,12 +46,6 @@ h1, h2, h3, h4, h5 {
   font-weight: 600;
 }
 
-/* .subheading {
-  font-family: 'Great Vibes', cursive;
-  font-size: 28px;
-  color: #c62828;
-} */
-
 /* ======================
    NAVBAR STYLE
 ====================== */
@@ -60,7 +53,6 @@ h1, h2, h3, h4, h5 {
   padding: 15px 0;
   background-color: #000;
 }
-
 
 .navbar-nav .nav-link {
   font-weight: 500;
@@ -73,7 +65,7 @@ h1, h2, h3, h4, h5 {
 }
 
 /* ======================
-   HERO SLIDER
+   HERO SLIDER WITH ARBUTUS FONT FOR SUBHEADING - DECREASED SIZE
 ====================== */
 .slider-text h1 {
   font-size: 3rem;
@@ -82,6 +74,52 @@ h1, h2, h3, h4, h5 {
 
 .slider-text .subheading {
   color: #ffffff;
+}
+
+/* ELEGANT HERO SUBHEADING WITH ARBUTUS FONT - DECREASED SIZE */
+.home-slider .slider-text .subheading {
+  display: block;
+  font-family: 'Arbutus', cursive !important; /* Changed from Alex Brush to Arbutus */
+  font-size: 3rem !important; /* DECREASED from 5.5rem to 4rem */
+  font-weight: 400 !important;
+  letter-spacing: 2px !important; /* Increased letter spacing for Arbutus */
+  color: #ffffff !important;
+  margin-bottom: 15px;
+  white-space: nowrap;
+  text-shadow: 0 4px 8px rgba(0,0,0,0.8);
+  line-height: 1.1;
+  text-transform: uppercase; /* Added uppercase for Arbutus style */
+}
+
+/* MOBILE + TABLET RESPONSIVE - DECREASED SIZE */
+@media (max-width: 768px) {
+  .home-slider .slider-text .subheading {
+    white-space: normal !important;
+    overflow: visible !important;
+    text-overflow: unset !important;
+    line-height: 1.2;
+    font-size: 2rem !important; /* DECREASED from 4rem to 3rem */
+    text-align: center;
+    letter-spacing: 2px !important;
+  }
+  
+  .home-slider .slider-text h1 {
+    font-size: 2.1rem !important;
+    letter-spacing: 3px;
+    font-weight: 700;
+  }
+}
+
+@media (max-width: 480px) {
+  .home-slider .slider-text .subheading {
+    font-size: 2.3rem !important; /* DECREASED from 3rem to 2.3rem */
+    line-height: 1.15;
+    letter-spacing: 1.5px !important;
+  }
+  
+  .home-slider .slider-text h1 {
+    font-size: 1.95rem !important;
+  }
 }
 
 .overlay {
@@ -103,12 +141,42 @@ h1, h2, h3, h4, h5 {
 }
 
 /* ======================
-   MENU ITEMS
+   MENU ITEMS - FIXED LAYOUT
 ====================== */
 .menus {
   background: #ffffff;
   border-radius: 12px;
   box-shadow: 0 6px 16px rgba(0,0,0,0.08);
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+}
+
+/* Fix for menu image alignment */
+.menus .menu-img {
+  width: 40%;
+  height: auto;
+  min-height: 200px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 12px 0 0 12px;
+}
+
+.menus .text {
+  width: 60%;
+  padding: 25px;
+  display: flex;
+  align-items: center;
+}
+
+/* Fix for reversed layout items */
+.menus .menu-img.order-md-last {
+  order: 2;
+  border-radius: 0 12px 12px 0;
+}
+
+.menus .text.order-md-first {
+  order: 1;
 }
 
 .price {
@@ -141,7 +209,6 @@ h1, h2, h3, h4, h5 {
 .vs-footer a:hover {
   color: #2e7d32;
 }
-
 
 /* space between image & text */
 .vs-wrap-about .wrap-about {
@@ -181,7 +248,6 @@ h1, h2, h3, h4, h5 {
 }
 
 @media (max-width: 768px) {
-
   /* Keep height for background-image div */
   .vs-wrap-about .img {
     height: 260px;   /* mobile-friendly height */
@@ -207,35 +273,26 @@ h1, h2, h3, h4, h5 {
   }
 }
 
+.vs-wrap-about .img-1,
+.vs-wrap-about .img-2 {
+  margin: 0 0 15px 0;
+}
 
-  .vs-wrap-about .img-1,
-  .vs-wrap-about .img-2 {
-    margin: 0 0 15px 0;
-  }
-  .vs-wrap-about img,
-  .vs-wrap-about video {
-    width: 100%;
-    height: auto !important;
-    object-fit: contain !important;
-  }
+.vs-wrap-about img,
+.vs-wrap-about video {
+  width: 100%;
+  height: auto !important;
+  object-fit: contain !important;
+}
 
 .about-video {
   border-radius: 20px;
 }
+
 .vs-wrap-about .img {
   margin-bottom: 20px;
 }
-.slider-text h1 {
-  font-size: 1.8rem !important;
-}
-@media (max-width: 576px) {
-  .slider-text h1 {
-    font-size: 1.5rem !important;
-  }
-  .slider-text .subheading {
-    font-size: 0.95rem !important;
-  }
-}
+
 @media (max-width: 768px) {
   .vs-wrap-about .img {
     margin-bottom: 20px;
@@ -245,6 +302,7 @@ h1, h2, h3, h4, h5 {
     padding-top: 20px;
   }
 }
+
 @media (max-width: 768px) {
   .card-body .d-flex {
     padding: 10px 0;
@@ -254,12 +312,7 @@ h1, h2, h3, h4, h5 {
     font-size: 0.95rem;
   }
 }
-.menus {
-  flex-direction: column;
-}
-.menu-img {
-  height: 160px;
-}
+
 @media (max-width: 768px) {
   .vs-footer-widget h2 {
     margin-bottom: 10px;
@@ -269,6 +322,7 @@ h1, h2, h3, h4, h5 {
     font-size: 0.9rem;
   }
 }
+
 @media (max-width: 768px) {
   .navbar-brand {
     text-align: left;
@@ -278,19 +332,15 @@ h1, h2, h3, h4, h5 {
 /* =========================
    NAVBAR BRAND – FINAL FIX
 ========================= */
-
 .navbar-brand {
   padding: 0;
   margin-right: auto;
   white-space: normal;
 }
 
-
-
 /* =========================
    MOBILE NAVBAR SCROLL FIX
 ========================= */
-
 /* When navbar becomes light on scroll */
 .vs-navbar-light.scrolled,
 .vs-navbar-light.awake {
@@ -323,41 +373,42 @@ h1, h2, h3, h4, h5 {
     padding: 8px 0 !important;
   }
 }
+
 @media (max-width: 768px) {
   .vs-navbar-light.scrolled .brand-mobile small {
     display: none;
   }
 }
+
 /* =========================
    MOBILE SCROLL BRAND COLOR – GREEN
 ========================= */
 @media (max-width: 768px) {
-
   /* When navbar becomes white on scroll */
   .vs-navbar-light.scrolled .brand-mobile strong,
   .vs-navbar-light.awake .brand-mobile strong {
     color: #2e7d32 !important; /* Premium green */
     text-shadow: none;
   }
-
 }
+
 /* =========================
-   HERO BRAND TEXT – EXTRA BIG MOBILE
+   HERO BRAND TEXT – EXTRA BIG MOBILE - DECREASED SIZE
 ========================= */
 @media (max-width: 768px) {
-
   /* Vaishnavas Thattu Idli Kadai */
   .home-slider .slider-text .subheading {
-    font-family: 'Great Vibes', cursive !important;
-    font-size: 2.1rem !important;     /* MUCH BIGGER */
-    line-height: 1.25 !important;
-    letter-spacing: 1.5px;
+    font-family: 'Arbutus', cursive !important; /* Changed to Arbutus */
+    font-size: 2.2rem !important; /* DECREASED from 2.8rem to 2.5rem */
+    line-height: 1.2 !important;
+    letter-spacing: 1.5px !important;
     margin-bottom: 14px;
     display: block;
-    color: #d9f99d;                   /* premium veg green */
+    color: #ffffff;
     text-shadow: 
       0 2px 4px rgba(0,0,0,0.6),
       0 4px 10px rgba(0,0,0,0.5);
+    text-transform: uppercase; /* Added for Arbutus */
   }
 
   /* PURE VEG RESTAURANT */
@@ -368,30 +419,29 @@ h1, h2, h3, h4, h5 {
   }
 }
 
-/* SMALL PHONES (VERY IMPORTANT) */
+/* SMALL PHONES (VERY IMPORTANT) - DECREASED SIZE */
 @media (max-width: 480px) {
-
   .home-slider .slider-text .subheading {
-    font-size: 2.3rem !important;   /* EVEN BIGGER */
+    font-size: 1rem !important; /* DECREASED from 2.3rem to 2rem */
   }
 
   .home-slider .slider-text h1 {
     font-size: 1.95rem !important;
   }
 }
+
 .home-slider .slider-text .subheading {
   color: #ffffff !important;
 }
-.home-slider .slider-text h1 {
-  color: #2e7d32 !important; /* premium veg green */
-}
 
+.home-slider .slider-text h1 {
+  color: #f1f12a !important;
+}
 
 /* =====================================
    MOBILE NAVBAR BRAND – BIG & VISIBLE
 ===================================== */
 @media (max-width: 768px) {
-
   .brand-mobile {
     display: block !important;
     max-width: 280px;
@@ -401,9 +451,9 @@ h1, h2, h3, h4, h5 {
   /* Vaishnavas */
   .brand-mobile strong {
     font-family: 'Great Vibes', cursive !important;
-    font-size: 32px !important;        /* 🔥 BIGGER */
+    font-size: 32px !important;
     font-weight: 400;
-    color: #ffffff !important;         /* light green */
+    color: #ffffff !important;
     letter-spacing: 1.2px;
     text-shadow:
       0 2px 4px rgba(0,0,0,0.7),
@@ -414,11 +464,11 @@ h1, h2, h3, h4, h5 {
   .brand-mobile small {
     display: block !important;
     font-family: 'Playfair Display', serif;
-    font-size: 14px !important;        /* 🔥 BIGGER */
+    font-size: 14px !important;
     font-weight: 500;
     margin-top: 4px;
     letter-spacing: 1.4px;
-    color: #dff2e0 !important;         /* very light green */
+    color: #dff2e0 !important;
     text-shadow: 0 1px 3px rgba(0,0,0,0.6);
   }
 
@@ -434,10 +484,10 @@ h1, h2, h3, h4, h5 {
     color: #4caf50 !important;
   }
 }
+
 /* =========================
    NAVBAR LOGO – DESKTOP
 ========================= */
-
 .logo-text {
   display: inline-block;
   line-height: 1.1;
@@ -479,7 +529,6 @@ h1, h2, h3, h4, h5 {
    MOBILE ADJUSTMENTS
 ========================= */
 @media (max-width: 768px) {
-
   .logo-top {
     font-size: 10px;
     letter-spacing: 2px;
@@ -500,7 +549,6 @@ h1, h2, h3, h4, h5 {
    VERY SMALL SCREENS
 ========================= */
 @media (max-width: 480px) {
-
   .logo-top {
     font-size: 9px;
   }
@@ -513,10 +561,10 @@ h1, h2, h3, h4, h5 {
     font-size: 10px;
   }
 }
+
 /* =====================================
    FINAL NAVBAR LOGO (DESKTOP + MOBILE)
 ===================================== */
-
 .navbar-brand.logo-text {
   padding: 4px 0;
   line-height: 1.15;
@@ -552,7 +600,6 @@ h1, h2, h3, h4, h5 {
 
 /* ================= MOBILE ================= */
 @media (max-width: 768px) {
-
   .logo-top {
     font-size: 10px;
     letter-spacing: 2px;
@@ -581,10 +628,10 @@ h1, h2, h3, h4, h5 {
     color: #2e7d32; /* premium veg green */
   }
 }
+
 /* ===============================
    HERO SECTION – PURE MAROON ONLY
 ================================ */
-
 /* Force maroon background everywhere */
 .home-slider,
 .home-slider .slider-item,
@@ -603,7 +650,6 @@ h1, h2, h3, h4, h5 {
   filter: none !important;
 }
 
-
 /* PURE VEG / NUTRITIOUS & TASTY – YELLOW */
 .home-slider .slider-text h1,
 .home-slider .slider-text .heading {
@@ -614,9 +660,9 @@ h1, h2, h3, h4, h5 {
   text-shadow: 0 3px 6px rgba(0,0,0,0.7);
 }
 
-  .home-slider .slider-text h1 {
-    font-size: 1.9rem;
-  }
+.home-slider .slider-text h1 {
+  font-size: 1.9rem;
+}
 
 /* ===============================
    HARD REMOVE GREEN (SAFETY)
@@ -635,7 +681,6 @@ h1, h2, h3, h4, h5 {
 /* ===============================
    FLOWER GARLAND – FINAL WORKING
 ================================ */
-
 /* Slider item must be relative */
 .home-slider .slider-item {
   position: relative;
@@ -647,15 +692,12 @@ h1, h2, h3, h4, h5 {
   position: absolute;
   top: 0;
   left: 0;
-
   width: 100%;
   height: 90px;
-
   background-image: url("images/flower-garland.png");
   background-repeat: repeat-x;
   background-position: top center;
   background-size: auto 90px;
-
   z-index: 20;       /* above overlay */
   pointer-events: none;
 }
@@ -671,6 +713,7 @@ h1, h2, h3, h4, h5 {
   z-index: 30;
   padding-top: 120px;
 }
+
 @media (max-width: 768px) {
   .home-slider .slider-item::before {
     height: 65px;
@@ -682,12 +725,9 @@ h1, h2, h3, h4, h5 {
   }
 }
 
-
-
 /* ===============================
    NAVBAR LOGO – FINAL STYLE
 ================================ */
-
 .navbar-brand.logo-text {
   line-height: 1.1;
   padding: 6px 0;
@@ -746,51 +786,7 @@ h1, h2, h3, h4, h5 {
     letter-spacing: 2.2px;
   }
 }
-/* =====================================
-   HERO TITLE – PROFESSIONAL BOLD LOOK
-===================================== */
 
-.home-slider .slider-text .subheading {
-  display: block;                         /* ensures it behaves as a block element */
-  font-family: 'Cinzel', serif !important; 
-  font-size: 3.35rem !important;          /* Desktop size */
-  font-weight: 800 !important;            /* bolder than before */
-  letter-spacing: 1.5px !important;       /* slightly tighter spacing */
-  text-transform: uppercase;
-  color: #ffffff !important;
-  margin-bottom: 10px;
-  white-space: nowrap;                     /* single line on desktop */
-  text-shadow: 0 3px 6px rgba(0,0,0,0.6); /* stronger shadow for depth */
-}
-
-/* MOBILE + TABLET – MULTI LINE RESPONSIVE */
-@media (max-width: 768px) {
-  .home-slider .slider-text .subheading {
-    white-space: normal !important;       /* allow wrapping */
-    overflow: visible !important;
-    text-overflow: unset !important;
-    line-height: 1.4;
-    font-size: 2.2rem !important;         /* scaled down for smaller screens */
-    text-align: center;
-    letter-spacing: 1.2px;
-  }
-}
-
-@media (max-width: 480px) {
-  .home-slider .slider-text .subheading {
-    font-size: 1.8rem !important;         /* mobile-friendly size */
-    line-height: 1.35;
-    letter-spacing: 1px;
-  }
-}
-
-
-.home-slider .slider-text .subheading {
-  font-family: 'Cinzel', serif;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-}
 /* SALIGRAMAM – top small text, gold */
 .logo-top {
   display: block;
@@ -841,15 +837,16 @@ h1, h2, h3, h4, h5 {
     letter-spacing: 2.5px;
   }
 }
+
 @media (max-width: 480px) {
   .logo-top { font-size: 9px; }
   .logo-main { font-size: 22px; }
   .logo-sub { font-size: 10px; }
 }
+
 /* =====================================
    DESKTOP SCROLL FIX – LOGO VISIBILITY
 ===================================== */
-
 .vs-navbar-light.scrolled,
 .vs-navbar-light.awake {
   background: #ffffff !important;
@@ -858,14 +855,14 @@ h1, h2, h3, h4, h5 {
 /* SALIGRAMAM */
 .vs-navbar-light.scrolled .logo-top,
 .vs-navbar-light.awake .logo-top {
-  color: #FFD700 !important; /* maroon */
+  color: #FFD700 !important;
   opacity: 0.9;
 }
 
 /* VAISHNAVAS */
 .vs-navbar-light.scrolled .logo-main,
 .vs-navbar-light.awake .logo-main {
-  color: #2e7d32 !important; /* maroon */
+  color: #2e7d32 !important;
 }
 
 /* THATTU IDLY KADAI */
@@ -875,10 +872,188 @@ h1, h2, h3, h4, h5 {
   opacity: 0.85;
 }
 
+/* =========================
+   MOBILE RESPONSIVE FIXES FOR MENU ITEMS
+========================= */
+@media (max-width: 768px) {
+  .menus {
+    flex-direction: column !important;
+  }
+  
+  .menus .menu-img {
+    width: 100% !important;
+    height: 200px !important;
+    border-radius: 12px 12px 0 0 !important;
+    order: 1 !important;
+  }
+  
+  .menus .text {
+    width: 100% !important;
+    order: 2 !important;
+    border-radius: 0 0 12px 12px !important;
+  }
+  
+  .menus .menu-img.order-md-last {
+    border-radius: 12px 12px 0 0 !important;
+  }
+  
+  .menus .text.order-md-first {
+    border-radius: 0 0 12px 12px !important;
+  }
+}
 
+/* =========================
+   MOBILE RESPONSIVE FIXES
+========================= */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.navbar-toggler:focus {
+  box-shadow: none;
+}
+
+.navbar-brand {
+  margin-right: auto;
+}
+
+.vs-footer .row.mb-5 {
+  margin-bottom: 2rem !important;
+}
+
+/* =========================
+   TABLET & MOBILE (≤768px)
+========================= */
+@media (max-width: 768px) {
+  /* Top header */
+  .top .col-md-5 {
+    text-align: center !important;
+    justify-content: center !important;
+  }
+
+  /* Featured menu cards */
+  .featured-menus {
+    margin-bottom: 20px;
+  }
+
+  /* Slider text */
+  .slider-text h1 {
+    font-size: 1.8rem !important;
+  }
+
+  .slider-text .subheading {
+    font-size: 1rem !important;
+  }
+
+  /* About section */
+  .vs-wrap-about {
+    padding: 40px 0;
+  }
+
+  .vs-wrap-about .wrap-about,
+  .vs-wrap-about .owners {
+    text-align: center;
+  }
+
+  /* Counter */
+  .vs-counter .col-md-3 {
+    text-align: center !important;
+    margin-top: 20px;
+  }
+
+  .vs-counter .block-18 {
+    margin-bottom: 20px;
+  }
+
+  .vs-counter p {
+    margin-top: 20px;
+    font-style: italic;
+  }
+
+  /* Services */
+  .services {
+    margin-bottom: 30px;
+  }
+
+  /* Why choose us */
+  .card-body .d-flex {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .card-body i {
+    margin-bottom: 10px;
+  }
+
+  /* Footer */
+  .vs-footer-widget {
+    margin-bottom: 30px;
+    text-align: center;
+  }
+
+  .vs-footer-social {
+    justify-content: center;
+  }
+
+  /* Navbar */
+  .navbar-nav {
+    text-align: center;
+  }
+
+  .navbar-nav .nav-link {
+    padding: 12px 0;
+  }
+}
+
+/* =========================
+   EXTRA SMALL (≤576px)
+========================= */
+@media (max-width: 576px) {
+  .container,
+  .container-fluid {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .heading-section h2 {
+    font-size: 1.5rem;
+  }
+
+  .top .d-flex {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .top .col-md {
+    margin-bottom: 10px;
+  }
+
+  .block-18 .number {
+    font-size: 1.8rem;
+  }
+
+  .card-body .col-md-6 {
+    margin-bottom: 15px;
+  }
+}
+
+/* =========================
+   MOBILE: Clean Why Choose Us
+========================= */
+@media (max-width: 768px) {
+  .heading-section .subheading {
+    font-size: 36px !important;
+    line-height: 1.1;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .vs-section.bg-light .card {
+    margin-top: 30px;
+  }
+}
   </style>
-
-
   </head>
   <body>
     <div class="py-1 bg-black top">
@@ -949,8 +1124,6 @@ h1, h2, h3, h4, h5 {
           </div>
         </div>
       </div>
-
-      
     </section>
 
     <section class="vs-section vs-no-pt vs-no-pb">
@@ -1174,17 +1347,17 @@ h1, h2, h3, h4, h5 {
           <div class="col-md-12 col-lg-6 d-flex align-self-stretch">
             <div class="menus d-sm-flex vs-animate align-items-stretch">
               <div class="menu-img img order-md-last" style="background-image: url(images/vegfired.jpg);"></div>
-              <div class="text d-flex align-items-center">
+              <div class="text d-flex align-items-center order-md-first">
                 <div>
                   <div class="d-flex">
                     <div class="one-half">
-                      <h3>VEG FIRED RICE</h3>
+                      <h3>VEG FRIED RICE</h3>
                     </div>
                     <div class="one-forth">
                       <span class="price">Rs.100</span>
                     </div>
                   </div>
-                  <p><span></span>, <span></span></p>
+                  <p><span>Fresh vegetables</span>, <span>Basmati rice</span></p>
                 </div>
               </div>
             </div>
@@ -1192,7 +1365,7 @@ h1, h2, h3, h4, h5 {
           <div class="col-md-12 col-lg-6 d-flex align-self-stretch">
             <div class="menus d-sm-flex vs-animate align-items-stretch">
               <div class="menu-img img order-md-last" style="background-image: url(images/vegnoodle.jpg);"></div>
-              <div class="text d-flex align-items-center">
+              <div class="text d-flex align-items-center order-md-first">
                 <div>
                   <div class="d-flex">
                     <div class="one-half">
@@ -1202,7 +1375,7 @@ h1, h2, h3, h4, h5 {
                       <span class="price">Rs.90</span>
                     </div>
                   </div>
-                  <p><span></span>, <span></span></p>
+                  <p><span>Noodles</span>, <span>Mixed vegetables</span></p>
                 </div>
               </div>
             </div>
@@ -1221,7 +1394,7 @@ h1, h2, h3, h4, h5 {
                       <span class="price">Rs.180</span>
                     </div>
                   </div>
-                  <p><span></span>, <span></span></p>
+                  <p><span>Cottage cheese</span>, <span>Spices</span></p>
                 </div>
               </div>
             </div>
@@ -1392,194 +1565,6 @@ h1, h2, h3, h4, h5 {
         <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" 
              alt="Chat on WhatsApp" width="40" height="40">
     </a>
-    <style>
-      /* Mobile Responsive Fixes */
-      /* =========================
-   GLOBAL FIXES
-========================= */
-img {
-  max-width: 100%;
-  height: auto;
-}
-
-.navbar-toggler:focus {
-  box-shadow: none;
-}
-
-.navbar-brand {
-  margin-right: auto;
-}
-
-.vs-footer .row.mb-5 {
-  margin-bottom: 2rem !important;
-}
-
-/* =========================
-   TABLET & MOBILE (≤768px)
-========================= */
-@media (max-width: 768px) {
-
-  /* Top header */
-  .top .col-md-5 {
-    text-align: center !important;
-    justify-content: center !important;
-  }
-
-  /* Featured menu cards */
-  .featured-menus {
-    margin-bottom: 20px;
-  }
-
-  /* Menu layout */
-  .menus {
-    flex-direction: column;
-    border-radius: 14px;
-    overflow: hidden;
-  }
-
-  .menu-img {
-    width: 100%;
-    height: 160px;
-    border-radius: 12px;
-  }
-
-  .menus .text {
-    padding: 18px;
-    text-align: center;
-  }
-
-  .menus h3 {
-    font-size: 1.1rem;
-  }
-
-  .price {
-    font-size: 1rem;
-  }
-
-  /* Slider text */
-  .slider-text h1 {
-    font-size: 1.8rem !important;
-  }
-
-  .slider-text .subheading {
-    font-size: 1rem !important;
-  }
-
-  /* About section */
-  .vs-wrap-about {
-    padding: 40px 0;
-  }
-
-  .vs-wrap-about .wrap-about,
-  .vs-wrap-about .owners {
-    text-align: center;
-  }
-
-  /* Counter */
-  .vs-counter .col-md-3 {
-    text-align: center !important;
-    margin-top: 20px;
-  }
-
-  .vs-counter .block-18 {
-    margin-bottom: 20px;
-  }
-
-  .vs-counter p {
-    margin-top: 20px;
-    font-style: italic;
-  }
-
-  /* Services */
-  .services {
-    margin-bottom: 30px;
-  }
-
-  /* Why choose us */
-  .card-body .d-flex {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .card-body i {
-    margin-bottom: 10px;
-  }
-
-  /* Footer */
-  .vs-footer-widget {
-    margin-bottom: 30px;
-    text-align: center;
-  }
-
-  .vs-footer-social {
-    justify-content: center;
-  }
-
-  /* Navbar */
-  .navbar-nav {
-    text-align: center;
-  }
-
-  .navbar-nav .nav-link {
-    padding: 12px 0;
-  }
-}
-
-/* =========================
-   EXTRA SMALL (≤576px)
-========================= */
-@media (max-width: 576px) {
-
-  .container,
-  .container-fluid {
-    padding-left: 15px;
-    padding-right: 15px;
-  }
-
-  .slider-text h1 {
-    font-size: 1.5rem !important;
-  }
-
-  .heading-section h2 {
-    font-size: 1.5rem;
-  }
-
-  .top .d-flex {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .top .col-md {
-    margin-bottom: 10px;
-  }
-
-  .block-18 .number {
-    font-size: 1.8rem;
-  }
-
-  .card-body .col-md-6 {
-    margin-bottom: 15px;
-  }
-}
-/* =========================
-   MOBILE: Clean Why Choose Us
-========================= */
-@media (max-width: 768px) {
-
-  .heading-section .subheading {
-    font-size: 36px !important;
-    line-height: 1.1;
-    text-align: center;
-    margin-bottom: 20px;
-  }
-
-  .vs-section.bg-light .card {
-    margin-top: 30px;
-  }
-
-}
-
-
-    </style>
+    
   </body>
 </html>
